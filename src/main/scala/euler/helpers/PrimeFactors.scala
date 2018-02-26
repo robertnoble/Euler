@@ -15,6 +15,11 @@ object PrimeFactors {
         helper(n, if (factor == 2L) 3L else factor + 2, list)
     }
 
-    helper(n, 2L)
+    require(n > 0, "must be positive long")
+
+    if (n < 2L)
+      Nil
+    else
+      helper(n, 2L)
   }
 }
