@@ -2,11 +2,11 @@ package euler.helpers
 
 import org.scalatest._
 import Matchers._
-import PrimeFactors.factorize
 
+class PrimeUtilitiesSpec extends FunSpec {
+  describe("factorize") {
+    import PrimeUtilities.factorize
 
-class PrimeFactorsSpec extends FunSpec {
-  describe("PrimeFactors") {
     it("should throw an exception on non-positive arguments") {
       intercept[IllegalArgumentException] {
         factorize(0)
@@ -26,6 +26,14 @@ class PrimeFactorsSpec extends FunSpec {
       factorize(4) shouldBe List(2, 2)
       factorize(6) shouldBe List(3, 2)
       factorize(1300) shouldBe List(13, 5, 5, 2, 2)
+    }
+  }
+
+  describe("primeStream") {
+    import PrimeUtilities.primeStream
+
+    it("should start with 2 and include the primes in sequence after that") {
+      primeStream.take(10).toList shouldBe List(2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
     }
   }
 }

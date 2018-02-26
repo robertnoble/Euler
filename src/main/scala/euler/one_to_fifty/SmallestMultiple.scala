@@ -12,9 +12,9 @@ object SmallestMultiple {
   }
 
   private def factorMap(n : Long) : FactorMap = {
-    import euler.helpers.PrimeFactors
+    import euler.helpers.PrimeUtilities
 
-    PrimeFactors.factorize(n).groupBy( x => x ).mapValues(x => x.size)
+    PrimeUtilities.factorize(n).groupBy(x => x ).mapValues(x => x.size)
   }
 
 
