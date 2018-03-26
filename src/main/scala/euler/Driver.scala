@@ -4,7 +4,7 @@ object Driver {
   import one_to_fifty._
 
   def main(args: Array[String]): Unit = {
-    val answer = LargestProductInSeries.calculate(LargestProductInSeries.series, 13)
+    val answer = PythagoreanTriplet.calculate(1000)
 
     println(s"Answer = ${answer}")
   }
