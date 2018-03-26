@@ -6,6 +6,8 @@ object EvenFibonacciNumbers {
 
   // Returns the sum of all even fibonacci numbers not higher than upperBound
   def calculate(upperBound : Int) : BigInt = {
+    require(upperBound >= 1, "the number must be positive")
+
     fibs
       .takeWhile { _ <= upperBound }
       .filter { _ % 2 == 0 }

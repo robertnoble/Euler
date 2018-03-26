@@ -13,7 +13,7 @@ object LargestPalindromeProduct {
     maxProduct
   }
 
-  private def isPalindrome(n : Int) : Boolean = {
+  private[one_to_fifty] def isPalindrome(n : Int) : Boolean = {
     val str = n.toString()
     val length = str.length()
 

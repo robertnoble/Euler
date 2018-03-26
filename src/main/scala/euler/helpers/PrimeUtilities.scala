@@ -37,7 +37,7 @@ object PrimeUtilities {
         helper(n, if (factor == 2L) 3L else factor + 2, list)
     }
 
-    require(n > 0, "must be positive long")
+    require(n >= 2, "must be at least 2")
 
     if (n < 2L)
       Nil
